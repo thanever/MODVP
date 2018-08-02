@@ -1,0 +1,1 @@
+This library uses PSD-BPA for power system dynamic simulation. Since PSD-BPA is commercial software, please copy the three .exe files in PSD-BPA, i.e., batBPA.exe, pfnt.exe and swnts.exe to this folder by yourself.

@@ -1,0 +1,5 @@
+*序号,故障名,初判结果,文本结果,曲线结果,报表结果,报警文件,
+001,LTP3S 1 13,#	系统稳定性:	0	系统稳定（需要进一步判断）,E:\1\software-design\alpha\result\13.OUT,E:\1\software-design\alpha\result\13.CUR,E:\1\software-design\alpha\result\13.SWX,E:\1\software-design\alpha\result\13.ERR,
+002,LTP3S 1 26,#	系统稳定性:	0	系统稳定（需要进一步判断）,E:\1\software-design\alpha\result\26.OUT,E:\1\software-design\alpha\result\26.CUR,E:\1\software-design\alpha\result\26.SWX,E:\1\software-design\alpha\result\26.ERR,
+003,LTP3S 1 34,#	系统稳定性:	0	系统稳定（需要进一步判断）,E:\1\software-design\alpha\result\34.OUT,E:\1\software-design\alpha\result\34.CUR,E:\1\software-design\alpha\result\34.SWX,E:\1\software-design\alpha\result\34.ERR,
+*采用系统默认的判稳条件进行判断

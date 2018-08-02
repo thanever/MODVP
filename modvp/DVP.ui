@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1002</width>
+    <height>586</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>动态无功补偿装置多目标优化配置程序</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_10">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>基本参数设置</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="3" column="2">
+         <widget class="QPushButton" name="pushButton_saveparameter">
+          <property name="text">
+           <string>保存</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="pushButton_denyparameter">
+          <property name="text">
+           <string>取消</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="3">
+         <widget class="QGroupBox" name="groupBox_BPAprogram">
+          <property name="title">
+           <string>BPA程序</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="2">
+            <widget class="QToolButton" name="toolButton_swntprogram">
+             <property name="text">
+              <string>选择</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEdit_swntprogram"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_pfprogram">
+             <property name="text">
+              <string>潮流计算程序</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_resultfile">
+             <property name="text">
+              <string>计算结果文件夹</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QToolButton" name="toolButton_resultfile">
+             <property name="text">
+              <string>选择</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="lineEdit_resultfile"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_swntprogram">
+             <property name="text">
+              <string>稳定批处理计算程序</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEdit_pfprogram"/>
+           </item>
+           <item row="1" column="2">
+            <widget class="QToolButton" name="toolButton_pfprogram">
+             <property name="text">
+              <string>选择</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="2" column="1" colspan="2">
+         <widget class="QGroupBox" name="groupBox_systemparameter">
+          <property name="title">
+           <string>系统参数</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_loadrate">
+             <property name="text">
+              <string>负荷增长率</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_loadrate">
+             <property name="decimals">
+              <number>2</number>
+             </property>
+             <property name="maximum">
+              <double>1.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.010000000000000</double>
+             </property>
+             <property name="value">
+              <double>0.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_dlrate">
+             <property name="text">
+              <string>动态负荷比例</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_dlrate">
+             <property name="decimals">
+              <number>2</number>
+             </property>
+             <property name="maximum">
+              <double>1.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.010000000000000</double>
+             </property>
+             <property name="value">
+              <double>0.500000000000000</double>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="3">
+         <widget class="QGroupBox" name="groupBox_systemdata">
+          <property name="title">
+           <string>系统数据文件</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_pfdata">
+             <property name="text">
+              <string>潮流数据文件</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEdit_pfdata"/>
+           </item>
+           <item row="0" column="2">
+            <widget class="QToolButton" name="toolButton_pfdata">
+             <property name="text">
+              <string>选择</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_bsedata">
+             <property name="text">
+              <string>基态.BSE文件</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEdit_bsedata"/>
+           </item>
+           <item row="1" column="2">
+            <widget class="QToolButton" name="toolButton__bsedata">
+             <property name="text">
+              <string>选择</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_changedata">
+             <property name="text">
+              <string>潮流修改文件</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="lineEdit_changedata"/>
+           </item>
+           <item row="2" column="2">
+            <widget class="QToolButton" name="toolButton_changedata">
+             <property name="text">
+              <string>选择</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_swntdata">
+             <property name="text">
+              <string>稳定数据文件</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="lineEdit_swntdata"/>
+           </item>
+           <item row="3" column="2">
+            <widget class="QToolButton" name="toolButton_swntdata">
+             <property name="text">
+              <string>选择</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_falutratedata">
+             <property name="text">
+              <string>故障率数据文件</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="lineEdit_faultratedata"/>
+           </item>
+           <item row="4" column="2">
+            <widget class="QToolButton" name="toolButton_faultratedata">
+             <property name="text">
+              <string>选择</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_mapdata">
+             <property name="text">
+              <string>地理位置文件</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLineEdit" name="lineEdit_mapdata"/>
+           </item>
+           <item row="5" column="2">
+            <widget class="QToolButton" name="toolButton_mapdata">
+             <property name="text">
+              <string>选择</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QGroupBox" name="groupBox_DVparameter">
+          <property name="title">
+           <string>动态无功补偿装置参数</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_dvtype">
+             <property name="text">
+              <string>补偿装置类型</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="label_maxrate">
+             <property name="text">
+              <string>最大容量</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="label_mingap">
+             <property name="text">
+              <string>最小容量间隔</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="5">
+            <widget class="QLabel" name="label_fixedcost">
+             <property name="text">
+              <string>固定安装费用</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="7">
+            <widget class="QLabel" name="label_17">
+             <property name="text">
+              <string>购买费用</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QCheckBox" name="checkBox_statcom">
+             <property name="text">
+              <string>STATCOM</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEdit__cc"/>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_22">
+             <property name="text">
+              <string>MVar</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QLineEdit" name="lineEdit_mingapstatcom"/>
+           </item>
+           <item row="1" column="4">
+            <widget class="QLabel" name="label_25">
+             <property name="text">
+              <string>MVar</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="5">
+            <widget class="QLineEdit" name="lineEdit_fixedcostatcom"/>
+           </item>
+           <item row="1" column="6">
+            <widget class="QLabel" name="label_35">
+             <property name="text">
+              <string>万元</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="7">
+            <widget class="QLineEdit" name="lineEdit_pcoststatcom"/>
+           </item>
+           <item row="1" column="8">
+            <widget class="QLabel" name="label_37">
+             <property name="text">
+              <string>万元/MVar</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QCheckBox" name="checkBox_svc">
+             <property name="text">
+              <string>SVC</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="lineEdit_maxratesvc"/>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="label_23">
+             <property name="text">
+              <string>MVar</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QLineEdit" name="lineEdit_mingapsvc"/>
+           </item>
+           <item row="2" column="4">
+            <widget class="QLabel" name="label_24">
+             <property name="text">
+              <string>MVar</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="5">
+            <widget class="QLineEdit" name="lineEdit_fixedcostsvc"/>
+           </item>
+           <item row="2" column="6">
+            <widget class="QLabel" name="label_36">
+             <property name="text">
+              <string>万元</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="7">
+            <widget class="QLineEdit" name="lineEdit_pcostsvc"/>
+           </item>
+           <item row="2" column="8">
+            <widget class="QLabel" name="label_38">
+             <property name="text">
+              <string>万元/MVar</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>关键故障分析</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_12">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButton_faultanalyse">
+          <property name="text">
+           <string>故障扫描分析</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" rowspan="3">
+         <widget class="QGroupBox" name="groupBox_chooseignorefault">
+          <property name="title">
+           <string>选择忽略故障</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_15">
+           <item row="0" column="0">
+            <widget class="QComboBox" name="comboBox_choosefault">
+             <property name="editable">
+              <bool>true</bool>
+             </property>
+             <property name="duplicatesEnabled">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="pushButton_addfault">
+             <property name="text">
+              <string>添加</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="pushButton_canclefault">
+             <property name="text">
+              <string>删除</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="3">
+            <widget class="QListWidget" name="listWidget_ignorefault"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="2" rowspan="4">
+         <widget class="QGroupBox" name="groupBox_mapkeyfault">
+          <property name="title">
+           <string>关键扰动位置图</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_11">
+           <item row="0" column="0">
+            <widget class="MatplotlibWidget" name="matplotlibwidget_mapkeyfault">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <strikeout>false</strikeout>
+              </font>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 0, 0, 255), stop:0.339795 rgba(255, 0, 0, 255), stop:0.339799 rgba(255, 255, 255, 255), stop:0.662444 rgba(255, 255, 255, 255), stop:0.662469 rgba(0, 0, 255, 255), stop:1 rgba(0, 0, 255, 255));</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="pushButton_kmeansfault">
+          <property name="text">
+           <string>K-means聚类分析</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="pushButton_mapkeyfault">
+          <property name="text">
+           <string>关键扰动位置示意</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QGroupBox" name="groupBox_barkeyfault">
+          <property name="title">
+           <string>关键扰动分析结果</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="0" column="0">
+            <widget class="MatplotlibWidget" name="matplotlibwidget_barkeyfault">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <strikeout>false</strikeout>
+              </font>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 0, 0, 255), stop:0.339795 rgba(255, 0, 0, 255), stop:0.339799 rgba(255, 255, 255, 255), stop:0.662444 rgba(255, 255, 255, 255), stop:0.662469 rgba(0, 0, 255, 255), stop:1 rgba(0, 0, 255, 255));</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>灵敏母线分析</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_13">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButton_senscompute">
+          <property name="text">
+           <string>灵敏度计算</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="pushButton_senskmeans">
+          <property name="text">
+           <string>K-means聚类分析</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="pushButton_mapsens">
+          <property name="text">
+           <string>灵敏母线位置示意</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" rowspan="3">
+         <widget class="QGroupBox" name="groupBox_ignorebus">
+          <property name="title">
+           <string>选择忽略母线</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_16">
+           <item row="0" column="1">
+            <widget class="QPushButton" name="pushButton_addbus">
+             <property name="text">
+              <string>添加</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="pushButton_canclebus">
+             <property name="text">
+              <string>删除</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QComboBox" name="comboBox_choosebus">
+             <property name="editable">
+              <bool>true</bool>
+             </property>
+             <property name="duplicatesEnabled">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="3">
+            <widget class="QListWidget" name="listWidget_ignorebus"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="2" rowspan="4">
+         <widget class="QGroupBox" name="groupBox_mapsens">
+          <property name="title">
+           <string>灵敏母线位置图</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_8">
+           <item row="0" column="0">
+            <widget class="MatplotlibWidget" name="matplotlibwidget_mapsens">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <strikeout>false</strikeout>
+              </font>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 0, 0, 255), stop:0.339795 rgba(255, 0, 0, 255), stop:0.339799 rgba(255, 255, 255, 255), stop:0.662444 rgba(255, 255, 255, 255), stop:0.662469 rgba(0, 0, 255, 255), stop:1 rgba(0, 0, 255, 255));</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QGroupBox" name="groupBox_sensbus">
+          <property name="title">
+           <string>灵敏母线分析结果</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <item row="0" column="0">
+            <widget class="MatplotlibWidget" name="matplotlibwidget_barbus">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <strikeout>false</strikeout>
+              </font>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 0, 0, 255), stop:0.339795 rgba(255, 0, 0, 255), stop:0.339799 rgba(255, 255, 255, 255), stop:0.662444 rgba(255, 255, 255, 255), stop:0.662469 rgba(0, 0, 255, 255), stop:1 rgba(0, 0, 255, 255));</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>优化计算</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_14">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_optimparameter">
+          <property name="title">
+           <string>优化算法参数</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_typealgorithm">
+             <property name="text">
+              <string>优化算法类型</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="comboBox_2">
+             <property name="frame">
+              <bool>true</bool>
+             </property>
+             <item>
+              <property name="text">
+               <string>NSGAII</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>NSGAIII</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>MOEA/D</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>SPEA2</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_33">
+             <property name="text">
+              <string>随机数种子</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QSpinBox" name="spinBox_randomseed">
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QLabel" name="label_27">
+             <property name="text">
+              <string>种群数量</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="5">
+            <widget class="QSpinBox" name="spinBox_popsize">
+             <property name="maximum">
+              <number>300</number>
+             </property>
+             <property name="value">
+              <number>50</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_maxinterate">
+             <property name="text">
+              <string>最大迭代次数</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="spinBox_maxinterate">
+             <property name="maximum">
+              <number>1000</number>
+             </property>
+             <property name="value">
+              <number>100</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_28">
+             <property name="text">
+              <string>交叉概率</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_crossoverp">
+             <property name="decimals">
+              <number>2</number>
+             </property>
+             <property name="maximum">
+              <double>1.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+             <property name="value">
+              <double>1.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QLabel" name="label_29">
+             <property name="text">
+              <string>变异概率</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="5">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_mutationp">
+             <property name="maximum">
+              <double>1.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.010000000000000</double>
+             </property>
+             <property name="value">
+              <double>0.020000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_31">
+             <property name="text">
+              <string>交叉分布因子</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="spinBox_crosoverdist">
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>15</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="label_32">
+             <property name="text">
+              <string>变异分布因子</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QSpinBox" name="spinBox_mutationdist">
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>20</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <widget class="QLabel" name="label_42">
+             <property name="text">
+              <string>外部档案大小</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="5">
+            <widget class="QSpinBox" name="spinBox_archive">
+             <property name="maximum">
+              <number>500</number>
+             </property>
+             <property name="value">
+              <number>50</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_44">
+             <property name="text">
+              <string>邻域数量</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QSpinBox" name="spinBox_neighobersize">
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>10</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLabel" name="label_43">
+             <property name="text">
+              <string>间隔大小</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QSpinBox" name="spinBox_gapsize"/>
+           </item>
+           <item row="3" column="4">
+            <widget class="QPushButton" name="pushButton_optim">
+             <property name="text">
+              <string>开始</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="5">
+            <widget class="QPushButton" name="pushButton_canceloptim">
+             <property name="text">
+              <string>取消</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="1" rowspan="2">
+         <widget class="QGroupBox" name="groupBox_optimallocation">
+          <property name="title">
+           <string>最优配置方案示意图</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_20">
+           <item row="0" column="0">
+            <widget class="MatplotlibWidget" name="matplotlibwidget_mapallocation">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <strikeout>false</strikeout>
+              </font>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 0, 0, 255), stop:0.339795 rgba(255, 0, 0, 255), stop:0.339799 rgba(255, 255, 255, 255), stop:0.662444 rgba(255, 255, 255, 255), stop:0.662469 rgba(0, 0, 255, 255), stop:1 rgba(0, 0, 255, 255));</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QGroupBox" name="groupBox_optmiresult">
+          <property name="title">
+           <string>优化结果</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_17">
+           <item row="0" column="0">
+            <widget class="MatplotlibWidget" name="matplotlibwidget_curveoptim">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <strikeout>false</strikeout>
+              </font>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(255, 0, 0, 255), stop:0.339795 rgba(255, 0, 0, 255), stop:0.339799 rgba(255, 255, 255, 255), stop:0.662444 rgba(255, 255, 255, 255), stop:0.662469 rgba(0, 0, 255, 255), stop:1 rgba(0, 0, 255, 255));</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QSplitter" name="splitter">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>目标函数值</string>
+              </property>
+             </widget>
+             <widget class="QComboBox" name="comboBox_objective"/>
+             <widget class="QPushButton" name="pushButton_mapallocation">
+              <property name="text">
+               <string>显示配置方案</string>
+              </property>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MatplotlibWidget</class>
+   <extends>QWidget</extends>
+   <header>matplotlibwidget</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
